@@ -7,7 +7,7 @@ if (!JWT_SECRET) {
   }
   console.warn('[WARNING] JWT_SECRET is not set. Set JWT_SECRET in your .env file before deploying.');
 }
-const EFFECTIVE_JWT_SECRET = JWT_SECRET || require('crypto').randomBytes(32).toString('hex');
+const EFFECTIVE_JWT_SECRET = JWT_SECRET || 'dev-only-secret-change-before-production';
 
 function authenticateToken(req, res, next) {
   const authHeader = req.headers['authorization'];

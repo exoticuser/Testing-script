@@ -42,8 +42,8 @@ router.get('/', (req, res) => {
       countParams.push(type);
     }
     if (search) {
-      query += ' AND (title LIKE ? OR cast LIKE ? OR genres LIKE ?)';
-      countQuery += ' AND (title LIKE ? OR cast LIKE ? OR genres LIKE ?)';
+      query += ' AND (title LIKE ? OR "cast" LIKE ? OR genres LIKE ?)';
+      countQuery += ' AND (title LIKE ? OR "cast" LIKE ? OR genres LIKE ?)';
       const searchParam = `%${search}%`;
       params.push(searchParam, searchParam, searchParam);
       countParams.push(searchParam, searchParam, searchParam);
