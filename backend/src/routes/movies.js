@@ -131,7 +131,8 @@ router.post('/fetch-imdb', authenticateToken, async (req, res) => {
     const { title, imdb_id } = req.body;
     let url;
     if (imdb_id) {
-      url = `https://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY || 'trilogy'}&i=${imdb_id}`;
+      const sanitizedId = String(imdb_id).replace(/[^a-zA-Z0-9]/g, '');
+      url = `https://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY || 'trilogy'}&i=${sanitizedId}`;
     } else if (title) {
       url = `https://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY || 'trilogy'}&t=${encodeURIComponent(title)}`;
     } else {
