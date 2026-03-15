@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['m.media-amazon.com', 'ia.media-imdb.com', 'imdb-api.com', 'via.placeholder.com'],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'm.media-amazon.com' },
+      { protocol: 'https', hostname: 'ia.media-imdb.com' },
+      { protocol: 'https', hostname: 'imdb-api.com' },
+      { protocol: 'https', hostname: 'via.placeholder.com' },
+    ],
   },
 }
 module.exports = nextConfig
