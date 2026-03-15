@@ -1,7 +1,23 @@
 node_modules/
 .env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 *.db
 .next/
 dist/
 build/
 backend/data/
+
+# Vercel
+.vercel
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
