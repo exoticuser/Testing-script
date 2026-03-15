@@ -125,13 +125,13 @@ export default function AdminDashboard() {
         {/* Stats */}
         <div className="grid grid-cols-3 gap-6 mb-8">
           {[
-            { label: 'Total Content', value: stats.total, color: 'amber' },
-            { label: 'Movies', value: stats.movies, color: 'purple' },
-            { label: 'TV Series', value: stats.series, color: 'blue' },
-          ].map(({ label, value, color }) => (
+            { label: 'Total Content', value: stats.total, cls: 'text-amber-500' },
+            { label: 'Movies', value: stats.movies, cls: 'text-purple-500' },
+            { label: 'TV Series', value: stats.series, cls: 'text-blue-500' },
+          ].map(({ label, value, cls }) => (
             <div key={label} className="bg-gray-900 rounded-xl p-6 border border-gray-800">
               <p className="text-gray-400 text-sm">{label}</p>
-              <p className={`text-4xl font-bold mt-2 text-${color}-500`}>{value}</p>
+              <p className={`text-4xl font-bold mt-2 ${cls}`}>{value}</p>
             </div>
           ))}
         </div>

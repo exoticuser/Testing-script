@@ -112,7 +112,7 @@ if (movieCount.count === 0) {
       imdb_id: 'tt0903747',
       year: '2008',
       rating: '9.5',
-      plot: 'A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family\'s future.',
+      plot: "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
       poster: 'https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDdmLWJjOTUtYjc2OGY3ZjdiMTk3XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg',
       backdrop: 'https://m.media-amazon.com/images/M/MV5BYmQ4YWMxYjUtNjZmYi00MDdmLWJjOTUtYjc2OGY3ZjdiMTk3XkEyXkFqcGdeQXVyMTMzNDExODE5._V1_SX300.jpg',
       screenshots: JSON.stringify([]),
